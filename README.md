@@ -9,5 +9,5 @@ Implemented a simple transaction handler (TxHandler.java) where it receives a se
  
 Implemented a node that maintains a blockchain (BlockChain.java). The node can be thought of as part of a blockchain-based consensus protocol, where a node could receive transactions and blocks from any other node, and updates its view accordingly. Implemented this while noting:   
 -Only keep around the most recent blocks, since the entire blockchain could be huge in size.  
--Blocks form a tree rather than a list, since there could be (multiple) forks.
+-Blocks form a tree rather than a list, since there could be (multiple) forks.  
 -Maintain a UTXO pool corresponding to every block on top of which a new block might be created.
