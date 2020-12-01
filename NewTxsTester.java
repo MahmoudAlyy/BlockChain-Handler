@@ -140,16 +140,10 @@ public class NewTxsTester {
       
 
         txHandler.handleTxs(possibleTxs);
+
+        System.out.println(UniqueID(txHandler.getUTXOPool().getAllUTXO().get(0).getTxHash()));
     
 
-        // test2 testHandler = new test2();
-
-        // testHandler.callme(possibleTxs);
-
-        /*
-         * The previous code only checks the validity. To update the pool, your
-         * implementation of handleTxs() will be called.
-         */
 
     }
 

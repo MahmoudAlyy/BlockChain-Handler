@@ -119,9 +119,8 @@ public class BlockChain {
         blockchainMap.put(UniqueID(block.getHash()), block);
         blockHeightMap.put(UniqueID(block.getHash()), newBlockHeight);
         
-        //update utxo to use the new head
-        utxopoolMap.put(UniqueID(block.getHash()), utxopoolMap.get(UniqueID(block.getPrevBlockHash())));
-        //utxopoolMap.remove(UniqueID(block.getPrevBlockHash()));
+        //update utxo
+        utxopoolMap.put(UniqueID(block.getHash()), handler.getUTXOPool());
 
         //remove transactions from transaction pool
         for (int i = 0; i <handledTxs.length ; i ++) {
@@ -165,5 +164,6 @@ public class BlockChain {
         System.out.println("PRINT ALL");
         System.out.println(blockchainMap);
         System.out.println(blockHeightMap);
+        System.out.println(utxopoolMap.keySet());
     }
 }

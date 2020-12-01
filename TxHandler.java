@@ -158,6 +158,10 @@ public class TxHandler {
         return out;
     }
 
+    public UTXOPool getUTXOPool(){
+        return utxoPool;
+    }
+
     /** returns a unique integer ID for the givenhash (so that debugging is easier) */
     public Integer UniqueID(byte[] hash) {
         return Arrays.toString(hash).hashCode();
